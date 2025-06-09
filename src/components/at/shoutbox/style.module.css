@@ -1,0 +1,11 @@
+.shoutboxSt {
+    margin: 0 0 1rem;
+    border: 0.5rem solid light-dark(var(--gray-2l), var(--gray-2d));
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 1.1rem;
+    font-size: 1.8rem;
+
+    @media (width >= 768px) {
+        font-size: 2.1rem;
+    }
+}

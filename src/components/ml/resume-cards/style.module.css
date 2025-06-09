@@ -1,0 +1,22 @@
+.resumeCardsSt {
+    dt {
+        border-radius: 0.5rem;
+        background-color: light-dark(var(--gray-2l), var(--gray-2d));
+        padding: 0.2rem 0.8rem 0.3rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        @media (width >= 768px) {
+            font-size: 2.1rem;
+        }
+    }
+
+    dd {
+        margin-left: 0.8rem;
+    }
+
+    .resumeCardPositionDateSt {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}

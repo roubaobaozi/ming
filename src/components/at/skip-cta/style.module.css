@@ -1,0 +1,21 @@
+.skipCtaSt {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 1rem;
+    background-color: light-dark(var(--gray-3l), var(--gray-3d));
+    padding: 0.2rem 0.8rem;
+    text-decoration: none;
+    color: light-dark(var(--gray-3d), var(--gray-3l));
+    font-size: 1.6rem;
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: box-shadow var(--transition);
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.6);
+    }
+}

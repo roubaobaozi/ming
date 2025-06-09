@@ -8,6 +8,18 @@
 }
 
 .logoSt {
-    display: inline-block;
+    display: none;
     height: 5rem;
+
+    @media (prefers-color-scheme: light) {
+        &.logoDarkSt {
+            display: inline-block;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        &.logoLightSt {
+            display: inline-block;
+        }
+    }
 }

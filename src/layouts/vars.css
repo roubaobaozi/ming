@@ -1,0 +1,20 @@
+:root {
+    /* Colour scheme */
+    --primary-dark: #1a263d;
+    --primary-light: #eff9ff;
+    --primary-link-dark: #386598;
+    --primary-link-light: #9ec3ed;
+
+    /* Monochrome palette */
+    --gray-5d: #112;
+    --gray-4d: #223;
+    --gray-3d: #334;
+    --gray-2d: #445;
+    --gray-d: #50505f;
+    --gray-l: #c0c0cf;
+    --gray-2l: #eeeef7;
+    --gray-3l: #fafaff;
+
+    /* Animations */
+    --transition: 0.15s ease-in;
+}

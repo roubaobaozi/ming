@@ -1,0 +1,9 @@
+.headerSt {
+    box-shadow: 0 0.5rem 0.8rem rgb(0 0 0 / 0.3);
+    background: linear-gradient(
+        to bottom,
+        light-dark(#bae6ff, var(--gray-4d)),
+        light-dark(#96d9ff, var(--gray-4d))
+    );
+    color: var(--gray-3l);
+}

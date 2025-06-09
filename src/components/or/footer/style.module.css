@@ -1,0 +1,21 @@
+.footerSt {
+    box-shadow: 0 -0.5rem 0.8rem rgb(0 0 0 / 0.3);
+    background: linear-gradient(to bottom, var(--gray-5d), var(--gray-4d));
+    padding: 1rem;
+    color: var(--gray-2l);
+
+    p {
+        padding: 0 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+.footerContainerSt {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+}

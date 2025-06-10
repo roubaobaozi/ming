@@ -52,11 +52,14 @@ const cardsWork: CardsArray = [
                     navigation.
                 </p>
                 <p>
-                    I also stepped into a temporary team lead role, guiding development on the LifeStyle site, and
-                    creating Kayo Sports’ and Binge’s AEM and Adobe Target integrated homepages.
+                    I also stepped into a temporary team lead role, guiding development on the{" "}
+                    <a href="https://lifestyle.com.au/" target="_blank" rel="noopener noreferrer">
+                        LifeStyle
+                    </a>{" "}
+                    site, and creating Kayo Sports’ and Binge’s AEM and Adobe Target integrated homepages.
                 </p>
                 <p>
-                    <b>Tech:</b> React, Bacon.js (Functional programming), styled-components, custom HTML5 video player,
+                    <b>Tech:</b> React, Bacon.js (functional programming), styled-components, custom HTML5 video player,
                     Webpack, eslint, stylelint, Storybook, Sinon, Jest, AEM, Adobe Target
                 </p>
             </>

@@ -1,6 +1,6 @@
 {
   "name": "ming",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The resumé of Ming, Front end Engineer based in Sydney, Australia",
   "repository": "https://github.com/roubaobaozi/ming.git",
   "author": "Ming",
@@ -44,7 +44,7 @@
     "vite-plugin-stylelint": "^6.0.0",
     "vitest": "^3.1.4"
   },
-  "optionalDependencies":  {
+  "optionalDependencies": {
     "@rollup/rollup-linux-arm64-gnu": "^4.44.0"
   }
 }

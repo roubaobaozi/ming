@@ -45,6 +45,13 @@ jobs:
         run: npm test --if-present
       - name: Build package
         run: npm run build --if-present
+      - name: Upload the dist folder to GitHub
+        if: inputs.deploy
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/client/
+          retention-days: 1
   deploy:
     name: Publish to server
     needs: build
@@ -60,8 +67,12 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Build package
-        run: npm run build --if-present
+      - name: Get Build
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          merge-multiple: true
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -70,7 +81,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           port: 21
           timeout: 120000
-          local-dir: ./dist/client/
+          local-dir: ./dist/
           server-dir: ${{ inputs.is_staging && './subdomains/dev/public_html/' || './public_html/' }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}

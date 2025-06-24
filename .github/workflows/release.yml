@@ -7,7 +7,7 @@ on:
 
 jobs:
   ci-cd:
-    name: CI-CD
+    name: Release
     uses: ./.github/workflows/ci-cd.yml
     secrets: inherit
     with:

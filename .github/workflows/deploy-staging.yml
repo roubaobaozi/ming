@@ -5,7 +5,7 @@ on: workflow_dispatch
 
 jobs:
   ci-cd:
-    name: CI-CD
+    name: Staging deploy
     uses: ./.github/workflows/ci-cd.yml
     secrets: inherit
     with:

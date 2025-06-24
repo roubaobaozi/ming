@@ -12,6 +12,3 @@ jobs:
     secrets: inherit
     with:
       deploy: true
-      ftp_server: FTP_SERVER
-      ftp_username: FTP_USERNAME
-      ftp_password: FTP_PASSWORD

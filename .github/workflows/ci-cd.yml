@@ -61,9 +61,9 @@ jobs:
         with:
           dry-run: true
           protocol: ftps
-          server: ${{ secrets.ftp_server }}
+          server: ${{ secrets.FTP_SERVER }}
           port: 21
           local-dir: ./client/
           server-dir: ${{ inputs.is_staging && './subdomains/dev/public_html/test/' || './public_html/test/' }}
-          username: ${{ secrets.ftp_username }}
-          password: ${{ secrets.ftp_password }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}

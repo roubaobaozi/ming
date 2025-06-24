@@ -53,7 +53,7 @@ jobs:
           path: dist/client/
           retention-days: 1
   deploy:
-    name: Publish to server
+    name: Publish to ${{inputs.is_staging && 'staging' || 'production'}} server
     needs: build
     runs-on: ubuntu-latest
     if: inputs.deploy

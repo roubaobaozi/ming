@@ -16,6 +16,6 @@ concurrency:
 
 jobs:
   ci-cd:
-    name: CI-CD
+    name: Pull request
     uses: ./.github/workflows/ci-cd.yml
     secrets: inherit

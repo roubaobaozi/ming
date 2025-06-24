@@ -1,0 +1,21 @@
+name: Build and test pull request
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    types:
+      - opened
+      - ready_for_review
+      - reopened
+      - synchronize
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  ci-cd:
+    name: CI-CD
+    uses: ./.github/workflows/ci-cd.yml
+    secrets: inherit

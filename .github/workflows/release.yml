@@ -1,0 +1,17 @@
+name: Build and test to release new package
+
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  ci-cd:
+    name: CI-CD
+    uses: ./.github/workflows/ci-cd.yml
+    secrets: inherit
+    with:
+      deploy: true
+      ftp_server: FTP_SERVER
+      ftp_username: FTP_USERNAME
+      ftp_password: FTP_PASSWORD

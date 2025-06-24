@@ -68,12 +68,12 @@ jobs:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          dry-run: true
+          # dry-run: true
           protocol: ftps
           server: ${{ secrets.FTP_SERVER }}
           port: 21
           timeout: 60000
           local-dir: ./dist/client/
-          server-dir: ${{ inputs.is_staging && './subdomains/dev/public_html/test/' || './public_html/test/' }}
+          server-dir: ${{ inputs.is_staging && './subdomains/dev/public_html/' || './public_html/' }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}

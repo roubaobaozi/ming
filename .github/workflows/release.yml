@@ -12,4 +12,3 @@ jobs:
     secrets: inherit
     with:
       deploy: true
-      is_staging: true

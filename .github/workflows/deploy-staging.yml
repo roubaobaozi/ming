@@ -1,0 +1,13 @@
+name: Staging - Build and test to release new package
+
+# Allows you to run this workflow manually from the Actions tab
+on: workflow_dispatch
+
+jobs:
+  ci-cd:
+    name: CI-CD
+    uses: ./.github/workflows/ci-cd.yml
+    secrets: inherit
+    with:
+      deploy: true
+      is_staging: true

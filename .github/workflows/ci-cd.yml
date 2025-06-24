@@ -58,16 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     if: inputs.deploy
     steps:
-      - name: Get latest files
-        uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Get Build
+      - name: Get build
         uses: actions/download-artifact@v4
         with:
           name: dist

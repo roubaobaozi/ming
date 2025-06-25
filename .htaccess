@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+# If trying to go to www, go to non-www instead
+RewriteCond %{HTTP_HOST} ^www\.mingteo\.com [NC]
+RewriteRule ^(.*)$ https://mingteo.com/$1 [L,R=301]
+
+# If trying to go to http, go to https instead
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://mingteo.com/$1 [R,L]
+
+# Redirect all .php requests to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} \.php$
+RewriteRule ^.*$ / [L,R=301]
+
+# Redirect all non-existent routes to index.html (SPA fallback)
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^.*$ /index.html [L]
+
+ErrorDocument 400 /404.html?error=400
+ErrorDocument 401 /404.html?error=401
+ErrorDocument 403 /404.html?error=403
+ErrorDocument 404 /404.html?error=404
+ErrorDocument 500 /404.html?error=500

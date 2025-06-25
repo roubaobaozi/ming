@@ -1,4 +1,4 @@
-name: Staging - Build and test to release new package
+name: Staging - Build, test, and deploy
 
 # Allows you to run this workflow manually from the Actions tab
 on: workflow_dispatch

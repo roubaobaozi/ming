@@ -1,0 +1,35 @@
+RewriteEngine On
+
+# If trying to go to www, go to non-www instead
+RewriteCond %{HTTP_HOST} ^www\.mingteo\.com [NC]
+RewriteRule ^(.*)$ https://mingteo.com/$1 [L,R=301]
+
+# If trying to go to http, go to https instead
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://mingteo.com/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^fundarinchinese\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.fundarinchinese\.com$
+RewriteRule ^(.*)$ "http\:\/\/fundarinchinese\.com\.au\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^learnchineseperth\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.learnchineseperth\.com$
+RewriteRule ^(.*)$ "http\:\/\/fundarinchinese\.com\.au\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^learnchineseperth\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.learnchineseperth\.com\.au$
+RewriteRule ^(.*)$ "http\:\/\/fundarinchinese\.com\.au\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^onlinemandarinchinese\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.onlinemandarinchinese\.com$
+RewriteRule ^(.*)$ "http\:\/\/fundarinchinese\.com\.au\/$1" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^onlinemandarinchinese\.com\.au$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.onlinemandarinchinese\.com\.au$
+RewriteRule ^(.*)$ "http\:\/\/fundarinchinese\.com\.au\/$1" [R=301,L]
+
+ErrorDocument 400 /error.php?error=400
+ErrorDocument 401 /error.php?error=401
+ErrorDocument 403 /error.php?error=403
+ErrorDocument 404 /error.php?error=404
+ErrorDocument 500 /error.php?error=500

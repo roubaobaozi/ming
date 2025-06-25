@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "dev": "vike dev",
-    "build": "vike build",
+    "build": "npm run build:vike && npm run build:copy",
+    "build:vike": "vike build",
+    "build:copy": "cp ./.htaccess ./dist/client/.htaccess",
     "preview": "vike preview",
     "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
     "lint:js": "eslint .",

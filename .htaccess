@@ -10,6 +10,8 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^/?(.*) https://mingteo.com/$1 [R,L]
 
 # Redirect all .php requests to index.html
+Redirect 301 /contact.php /contact/
+Redirect 301 /about.php /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} \.php$
 RewriteRule ^.*$ / [L,R=301]

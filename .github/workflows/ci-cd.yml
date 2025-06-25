@@ -52,6 +52,7 @@ jobs:
           name: dist
           path: dist/client/
           retention-days: 1
+          include-hidden-files: ${{inputs.is_staging != true}}
   deploy:
     name: Publish to server
     needs: build

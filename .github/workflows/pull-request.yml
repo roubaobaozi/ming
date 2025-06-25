@@ -1,4 +1,4 @@
-name: Build and test pull request
+name: PR - Build and test
 
 on:
   push:

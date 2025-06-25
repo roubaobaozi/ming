@@ -1,9 +1,10 @@
-name: Build and test to release new package
+name: Production - Build, test, and deploy
 
 on:
   release:
     types:
       - released
+  workflow_dispatch
 
 jobs:
   ci-cd:

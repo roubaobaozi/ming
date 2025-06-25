@@ -10,7 +10,7 @@
     "dev": "vike dev",
     "build": "npm run build:vike && npm run build:copy",
     "build:vike": "vike build",
-    "build:copy": "cp ./.htaccess ./dist/client/.htaccess",
+    "build:copy": "cp ./.htaccess ./dist/client/.htaccess && cp ./dist/robots.txt ./dist/client/robots.txt && cp ./dist/sitemap.xml ./dist/client/sitemap.xml",
     "preview": "vike preview",
     "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
     "lint:js": "eslint .",

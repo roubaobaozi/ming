@@ -1,4 +1,4 @@
-import "./global.css";
+import "../common/global.css";
 
 import MlNav from "../components/ml/nav";
 import AtSiteHeadingCta from "../components/at/site-heading-cta";
@@ -20,6 +20,7 @@ export default function LayoutDefault({ children }: { children: React.ReactNode 
             <Footer>
                 <FooterLinks>
                     <a href="/">Home</a>
+                    <a href="/humid">Is it humid?</a>
                     <a href="/contact">Contact</a>
                 </FooterLinks>
                 <p>Copyright &copy; 2025 Ming</p>

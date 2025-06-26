@@ -1,0 +1,16 @@
+@value sizePhone: 375px;
+@value sizePhablet: 415px;
+@value sizeTablet: 768px;
+@value sizeDesktop: 1024px;
+@value sizeDesktopL: 1280px;
+@value sizeDesktopXl: 1600px;
+@value sizeDesktopXxl: 1920px;
+
+/* Breakpoints for responsive design */
+@value bpPhone: (width >= sizePhone);
+@value bpPhablet: (width >= sizePhablet);
+@value bpTablet: (width >= sizeTablet);
+@value bpDesktop: (width >= sizeDesktop);
+@value bpDesktopL: (width >= sizeDesktopL);
+@value bpDesktopXl: (width >= sizeDesktopXl);
+@value bpDesktopXxl: (width >= sizeDesktopXxl);

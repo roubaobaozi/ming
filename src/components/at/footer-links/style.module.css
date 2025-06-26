@@ -1,3 +1,5 @@
+@value bpTablet from '../../../common/breakpoints.module.css';
+
 .footerLinksSt {
     display: flex;
     flex-flow: row wrap;
@@ -18,7 +20,7 @@
         color: var(--gray-2l);
         font-size: 1.2rem;
 
-        @media (width >= 768px) {
+        @media bpTablet {
             font-size: 1.4rem;
         }
 

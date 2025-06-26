@@ -1,8 +1,10 @@
+@value bpTablet from '../../../common/breakpoints.module.css';
+
 .pageHeadingSt {
     margin: 2rem 0 2.4rem;
     font-size: 2.4rem;
 
-    @media (width >= 768px) {
+    @media bpTablet {
         font-size: 3rem;
     }
 }

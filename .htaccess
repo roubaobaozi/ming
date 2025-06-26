@@ -19,11 +19,7 @@ RewriteRule ^.*$ / [L,R=301]
 # Redirect all non-existent routes to index.html (SPA fallback)
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
-<<<<<<< HEAD
-# RewriteRule ^.*$ /index.html [L]
-=======
 # RewriteRule ^.*$ / [L]
->>>>>>> f91cae1 (commit what up to)
 
 ErrorDocument 400 /404.html?error=400
 ErrorDocument 401 /404.html?error=401

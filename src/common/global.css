@@ -1,4 +1,4 @@
-@import url('./vars.css');
+@import url("./vars.css");
 
 :root {
     color-scheme: light dark;
@@ -12,7 +12,9 @@
 }
 
 html {
-    font: 300 10px / 1.35 "Ancizar Sans", sans-serif;
+    font:
+        300 10px / 1.35 "Ancizar Sans",
+        sans-serif;
     font-optical-sizing: auto;
 
     /* Prevent landscape orientation font-size inflation */
@@ -32,8 +34,14 @@ body {
     color: light-dark(var(--gray-3d), var(--gray-3l));
 }
 
-h1, h2, h3, h4, h5, h6,
-b, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
     font-weight: 600;
 }
 
@@ -49,7 +57,8 @@ figure {
     font-size: 1.8rem;
 }
 
-ul, ol {
+ul,
+ol {
     padding-left: 1.5rem;
 }
 
@@ -70,12 +79,24 @@ textarea {
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4, h5, h6,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
     line-height: 1.1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
 }
 
@@ -122,7 +143,8 @@ a {
     }
 }
 
-body.page-is-transitioning #page-content { /* stylelint-disable-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+body.page-is-transitioning #page-content {
     opacity: 0;
 }
 

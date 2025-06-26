@@ -3,9 +3,25 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import vike from "vike/plugin";
 import stylelint from "vite-plugin-stylelint";
+import sitemap from "@qalisa/vike-plugin-sitemap";
+import postcssModulesValues from "postcss-modules-values";
 
 export default defineConfig({
-    plugins: [vike(), react({}), stylelint()], // , tailwindcss()
+    plugins: [
+        vike(),
+        react({}),
+        stylelint(),
+        sitemap({
+            pagesDir: "src/pages",
+            baseUrl: "https://mingteo.com",
+        }),
+        // tailwindcss(),
+    ],
+    css: {
+        postcss: {
+            plugins: [postcssModulesValues],
+        },
+    },
     build: {
         target: "es2022",
     },

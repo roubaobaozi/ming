@@ -59,9 +59,9 @@ jobs:
     runs-on: ubuntu-latest
     if: inputs.deploy
     steps:
-      - name: Publish to server
+      - name: Targeting ${{inputs.is_staging && 'staging' || 'production'}} server
         run:
-          echo 'Publish to ${{inputs.is_staging && 'staging' || 'production'}} server'
+          echo 'Targeting ${{inputs.is_staging && 'staging' || 'production'}} server'
       - name: Get build
         uses: actions/download-artifact@v4
         with:
